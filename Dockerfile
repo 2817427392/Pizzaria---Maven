@@ -1,14 +1,12 @@
-# Usa imagem base do Tomcat com Java 17
+# Etapa 1: build com Maven
+FROM maven:3.9.4-eclipse-temurin-17 AS builder
+WORKDIR /app
+COPY . .
+RUN mvn clean package
+
+# Etapa 2: roda com Tomcat
 FROM tomcat:10.1-jdk17
-
-# Remove aplicações padrão do Tomcat
 RUN rm -rf /usr/local/tomcat/webapps/*
-
-# Copia o .war gerado pelo Maven para dentro do Tomcat
-COPY target/Pizzaria-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/ROOT.war
-
-# Abre a porta padrão
+COPY --from=builder /app/target/Pizzaria-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/ROOT.war
 EXPOSE 8080
-
-# Inicia o Tomcat quando o container for iniciado
 CMD ["catalina.sh", "run"]
