@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    top: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+body{
+    background-color: #f0ffff;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    height: 80px;
+    background-color: #92273B;
+    justify-content: space-around;
+    position: fixed;
+}
+
+.titulo{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #C59062;
+    font-size: 20px;
+}
+
+.titulo>h1{
+    font-family: 'Italianno';
+}
+
+.titulo>img{
+    width: 150px;
+}
+
+nav{
+    width: 700px;
+    height: 80px;
+}
+
+header>nav>ul{
+    display: flex;
+    list-style-type: none;
+    width: 700px;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+header>nav>ul>li>a{
+    width: 80px;
+    font-size: 20px;
+    text-align: center;
+    color:#C59062;
+    text-decoration: none;
+    height: 30px;
+    font-weight: 600;
+}
+
+header>nav>ul>li>a:hover{
+    width: 80px;
+    font-size: 20px;
+    text-align: center;
+    color: #f0ffff;
+    text-decoration: none;
+    height: 30px;
+}
+
+header>nav>ul>li>a.ativa {
+    color: #f0ffff;
+    font-weight: bold;
+    border-bottom: 3px solid #C59062;
+}
+
+main{
+    margin-top: 120px;
+    width: 100%;
+}
+
+/* Main e Form */
+
+main{
+    margin-top: 150px;
+    width: 100%;
+}
+
+article{
+    padding: 20px;
+    width: 480px;
+    margin: 30px auto;
+    background-color: #e2eaea;
+    border: 2px solid #C59062;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+article>h2{
+    text-align: center;
+}
+
+article>form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+article>form>div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 10px auto;
+    width: 400px;
+}
+
+article>form>div>label{
+    font-size: 17px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+    padding: 10px;
+    outline: none;
+    background-color: #f0ffff;
+    width: 380px;
+    border-radius: 5px;
+    border: solid 2px #C59062;
+    margin: 0 auto;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus{
+    border: solid 3px #C59062;
+}
+
+.espacoErro{
+    height: 20px;
+    width: 400px;
+    align-items: start;
+}
+
+.erro{
+    color: #92273B;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+input[type="submit"] {
+    width: 230px;
+    padding: 10px;
+    margin: 0 auto;
+    border: 2px solid #C59062;
+    border-radius: 10px;
+    background-color: #92273B;
+    color: #f0ffff;
+    text-transform: uppercase;
+}
+
+input[type="submit"]:hover {
+    background-color: #701f2e;
+    cursor: pointer;
+}
+
+.espaco-criou-conta{
+    height: 20px;
+    width: 400px;
+    align-items: start;
+}
+
+.criou{
+    color: #005800;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.naoCriou{
+    color: #92273B;
+    font-weight: bold;
+    font-size: 17px;
+}
