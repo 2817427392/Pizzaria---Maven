@@ -7,11 +7,10 @@ import java.sql.SQLException;
 
 public class Conexao {
     public static Connection conectar(){
-        Dotenv dotenv = Dotenv.load();
+        String url = System.getenv("DATABASE_URL");
+        String usuario = System.getenv("DATABASE_USER");
+        String senha = System.getenv("DATABASE_PASSWORD");
         Connection conn = null;
-        String url = dotenv.get("DATABASE_URL");
-        String usuario = dotenv.get("DATABASE_USER");
-        String senha = dotenv.get("DATABASE_PASSWORD");
         try{
             Class.forName("org.postgresql.Driver");
             conn = DriverManager.getConnection(url,usuario,senha);
